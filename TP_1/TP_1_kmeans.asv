@@ -1,0 +1,26 @@
+%K : nombre de classes
+K = 4;
+%image I
+I = double(imread('flower1.jpg'));
+%vecteur (X), nombre de la classe K
+X = load('gmm2d.asc');
+%random yk from Xi
+Y = rand (K, size(X,2)); %size de x,2 pour le nombre de colones
+Y = [Y(:,1)*(max(X(:,1))-min(X(:,1)))+ min(X(:,1)) Y(:,2)*(max(X(:,2))-min(X(:,2)))+ min(X(:,2))];
+
+%findNearest
+function nearest = findNearest(X,Y)
+    nearest = min((X+Y)*(X+Y));
+end
+
+%mykmeans :
+%img: image en double
+%ncluster: nombre de clusters
+%niter: nombre d'iterations
+%centroids: matrice nclusterx3 où chaque ligne est un centroid
+%labels: image à un seul canal dont la valeur est le label attribué au pixel
+function [labels, centroids] = mykmeans(img, ncluster, niter)
+for 
+    
+end
+end
