@@ -134,4 +134,4 @@ end
 %reshape (M, [size(I,1) size(I,2) 3]);
 %pareil pour les labels
 
-paire = [[590 369] [299 364]]
+%paire = [[590 369] [299 364]]
